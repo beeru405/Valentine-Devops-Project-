@@ -52,7 +52,7 @@ git clone https://github.com/beeru405/Valentine-Devops-Project-.git
 Now we will install nginx server.
 
 ```
-sudo apt install nginx
+sudo apt install nginx -y
 ```
 For check server & start server run below command :
 ```
@@ -68,7 +68,7 @@ sudo chmod 777 /var/run/docker.sock
 ```
 now that’s it. Run below command to make docker image by going inside the directory which we clone from github.
 ```
-cd valantine-devops-project-
+cd Valantine-devops-project-
 docker build -t valantine-devops .
 ```
 Run below commands to check images and make a container from image in which our server will run.
@@ -87,5 +87,5 @@ Now click on add rule & give your instance 8081 port access. Select myip for sec
 
 That’s it. Our web page is running on nginx server hosted on ec2 instance. Copy your instance public ip and go for below url:
 ```
-yourinstancepublicip:8081/yes.html
+http://<yourinstancepublicip>:8081/yes.html
 ```
